@@ -5,8 +5,9 @@ from .request import get_news
 @app.route('/')
 def index():
     '''
-    View root page function that returns the index page and its data
+    The index page and its contents are returned by the View root page function.
+
     '''
+    title = 'S-CLASS NEWS'
     news = get_news()
-    title = 'KIMNEWS'
     return render_template('index.html', title = title,articles = news)
