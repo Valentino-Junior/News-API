@@ -3,11 +3,14 @@
 <br><br><br><br>
 <h1 class="text-center">TOP-HEADLINE NEWS</h1>
         
+<div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;">
+        
+</div>
         <div class="container w-50">
             <div class="row">
                 <div class="column">
               {% for article in articles %}
-        
+        <div class="card border border-primary">
               <div class="card">
                 <img class="card img-fluid" src="{{article.urlToImage}}" alt="Top headline image">
                 <div class="card-body">
@@ -21,8 +24,9 @@
                   <small>Published:{{ article.publishedAt}}}</small>
                 </div>
               </div>
+              </div>
               {% endfor %}
             </div>
         </div>
-        
+        </div>
 {% endblock%}
