@@ -8,6 +8,6 @@ def index():
     The index page and its contents are returned by the View root page function.
 
     '''
-    title = 'S-CLASS NEWS'
+    title = 'F-CLASS NEWS'
     news = get_news()
     return render_template('index.html', title = title,articles = news)
