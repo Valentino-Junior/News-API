@@ -5,15 +5,19 @@ class Config:
     NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
 class ProdConfig(Config):
     '''
-    Production  configuration child class
+    Child class for production setup
     Args:
-        Config: The parent configuration class with General configuration settings
+        Config: General configuration options are found in the parent configuration class.
+        
     '''
     pass
 class DevConfig(Config):
     '''
-    Development  configuration child class
+    Child class for production setup
+    
     Args:
-        Config: The parent configuration class with General configuration settings
+        Config: General configuration options are found in the parent configuration class.
+        
     '''
     DEBUG = True
+
