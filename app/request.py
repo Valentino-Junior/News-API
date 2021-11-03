@@ -15,7 +15,7 @@ def get_news():
     '''
     Function that gets the json response to our url request
     '''
-    get_news_url = base_url.format(api_key)
+    get_news_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=8bb8f6be90734a8bbffa24c3e313f257'
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
