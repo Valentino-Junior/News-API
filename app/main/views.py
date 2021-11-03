@@ -1,8 +1,9 @@
 from flask import render_template
-from app import app
-from .request import get_news
+from . import main
+from ..request import get_news
+
 # Views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     The index page and its contents are returned by the View root page function.
