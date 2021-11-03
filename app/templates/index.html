@@ -2,30 +2,30 @@
 {% block content %}
 <br><br><br><br>
 <h1 class="text-center"><em>TOP-HEADLINE NEWS!!</em></h1>
-        
-        
+
+
 </div>
-        <div class="container">
-            <div class="row">
-              {% for article in articles %}
-              <div class="col-3">
-        <div class="card border border-primary">
-              <div class="card">
-                <img class="card img-fluid" src="{{article.urlToImage}}" alt="Top headline image">
-                <div class="card-body">
-                  <h5 class="card-title">{{article.title}}</h5>
-                  <p class="card-text">{{article.description}}</p>
-                  <a href="{{article.url}}">
-                    <p class="card-text"><button type="button" class="btn btn-outline-warning">More info</button></p>
-                  </a>
-                </div>
-                <div class="card-footer">
-                  <small>Published:{{ article.publishedAt}}</small>
-                </div>
-              </div>
-              </div>
-              </div>
-              {% endfor %}
-            </div>
+<div class="container">
+  <div class="row">
+    {% for article in articles %}
+    <div class="col-3">
+      <div class="card border border-primary">
+        <div class="card">
+          <img class="card img-fluid" src="{{article.urlToImage}}" alt="Top headline image">
+          <div class="card-body">
+            <h5 class="card-title">{{article.title}}</h5>
+            <p class="card-text">{{article.description}}</p>
+            <a href="{{article.url}}">
+              <p class="card-text"><button type="button" class="btn btn-outline-warning">More info</button></p>
+            </a>
+          </div>
+          <div class="card-footer">
+            <small>Published:{{ article.publishedAt}}</small>
+          </div>
         </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock%}
